@@ -1,0 +1,19 @@
+
+div {
+	background-color:  #d9d9dc;
+	color: #545455 !important;
+}
+.pict {
+	width: 15%;
+	border: solid white;
+	height: auto;
+	margin-top: 15%;
+}
+
+.name {
+	font-family: 'Alex Brush';
+}
+
+.sz {
+	height: 50em;
+}
