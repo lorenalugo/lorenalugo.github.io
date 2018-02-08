@@ -7,7 +7,7 @@ div {
 	width: 15%;
 	border: solid white;
 	height: auto;
-	margin-top: 15%;
+	margin-top: 10%;
 }
 
 .name {
@@ -16,4 +16,19 @@ div {
 
 .sz {
 	height: 50em;
+}
+
+p {
+	font-family: 'Bellefair';
+}
+
+.hello {
+	width: 50%;
+	height: auto;
+	margin-left: 25%;
+	margin-top: 2%;
+}
+
+.logos {
+	margin-top: 4%;
 }
