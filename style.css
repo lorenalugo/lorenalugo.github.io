@@ -1,21 +1,17 @@
 
-div {
-	background-color:  #d9d9dc;
+body {
+	background-color:  #d9d9dc !important;
 	color: #545455 !important;
 }
 .pict {
-	width: 15%;
+	width: 18%;
 	border: solid white;
 	height: auto;
-	margin-top: 10%;
+	margin-top: 8%;
 }
 
 .name {
 	font-family: 'Alex Brush';
-}
-
-.sz {
-	height: 50em;
 }
 
 p {
@@ -29,6 +25,7 @@ p {
 	margin-top: 2%;
 }
 
-.logos {
-	margin-top: 4%;
-}
+.pos {
+ 	margin-right: 4%
+ 	
+ }
