@@ -1,0 +1,258 @@
+
+<!DOCTYPE html> 
+<html><head><title>Calculadora</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style type="text/css">
+    .bg {
+      background-color: black;
+      color: white;
+      height: 600px;
+    }    
+
+    button {
+      border: 2px solid white !important;
+    }
+
+    .st {
+      margin-top: 20px;
+    }
+
+    #n1 {
+    	border: 1px solid white;
+    	width: 100px;
+    	height: 50px;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var acc = 0, op = "";
+
+  $(function() {
+    var num = $("#n1");
+    var mem = 0;
+     $("#n1").on("click", 
+      function(){ $("#n1").val("")
+      						.css('background-color', 'white');}
+    );
+
+    $("#b1").on("click", 
+      function() {
+        num.val(num.val() * num.val());
+      }
+    );
+
+  $("#mas").on("click",
+    function(){
+      acc = num.val();  op = "+";
+      $("#n1").val("");
+    }
+  );
+
+  $("#menos").on("click",
+    function(){
+      acc = num.val();  op = "-";
+      $("#n1").val("");
+    }
+  );
+
+  $("#por").on("click",
+    function(){
+      acc = num.val();  op = "*";
+      $("#n1").val("");
+    }
+  );
+
+  $("#entre").on("click",
+    function(){
+      acc = num.val();  op = "/";
+      $("#n1").val("");
+    }
+  );
+
+  $("#elevado").on("click",
+    function(){
+      acc = num.val();  op = "^";
+      $("#n1").val("");
+    }
+  );
+
+  $("#calcular").on("click",
+    function(){
+    if (op === "+") {num.val(+acc + +num.val())}
+    if (op === "-") {num.val(+acc - +num.val())}
+    if (op === "*") {num.val(+acc * +num.val())}
+    if (op === "/") {num.val(+acc / +num.val())}
+    if (op === "^") {num.val(Math.pow(acc,num.val()))}
+    $("#n1").css('background-color', 'white');
+    
+    }
+  );
+
+  $("#inverso").on("click",
+    function(){num.val(1 / num.val())
+    }
+  );
+
+  $("#sqrt").on("click",
+    function(){num.val(Math.sqrt(num.val()))
+    }
+  );
+
+  $("#parte_entera").on("click",
+    function(){
+      if (num.val() > 0) { num.val(Math.floor(num.val()))} 
+      else { num.val(-Math.ceil(num.val()))};
+    }
+  );  
+
+  $("#potencia_BaseDos").on("click",
+    function(){num.val(Math.pow(2,num.val()))
+    }
+  );
+
+  $("#factorial").on("click",
+    function(){
+      var factor = 1;
+      for(var i = 1; i <= num.val(); i++){
+        factor = factor * i;
+      }
+      num.val(factor);
+    }
+  );
+
+  $("#sumatorio").on("click",
+    function() {
+    var lista = num.val().split(",");
+    for (var j=0, acum=0; j<lista.length; j++){
+      acum += +lista[j];
+    }
+    num.val(acum);
+    }
+  );
+
+  $("#productoria").on("click",
+    function(){
+      var listaP = num.val().split(",");
+    for (var j=0, acum=1; j<listaP.length; j++){
+      acum *= +listaP[j];
+    }
+    num.val(acum);
+    }
+  );
+
+  $("#toM").on("click", 
+      function(){ mem = num.val();}
+    );
+
+  $("#fromM").on("dblclick", 
+      function(){ num.val(mem);}
+    );
+
+    $( ".draggable" ).draggable({
+      helper: "clone",
+      revert: "invalid"
+    });
+
+    $(".droppable").droppable({
+    		accept: '#fromM',
+            drop: function(event, ui) {
+                $(this).css('background', 'rgb(0,200,0)');
+            },
+            over: function(event, ui) {
+                $(this).css('background', 'orange');
+                num.val(mem);
+                
+            },
+            
+        });
+
+    $(".dropp").droppable({
+    		accept: '#n1',
+            drop: function(event, ui) {
+                $(this).css('background', 'rgb(0,200,0)');
+            },
+            over: function(event, ui) {
+                $(this).css('background', 'orange');
+                mem = num.val();
+                
+            },
+            
+        });
+  });
+  </script>
+</head>
+
+<body>
+	<div class="container bg">
+	<!--menu -->
+	<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">MOOC</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+		<div class="collapse navbar-collapse" id="navbarText">
+    		<ul class="navbar-nav mr-auto">
+      			<li class="nav-item"><a class="nav-link" href="carrusel_bootstrap.html">INICIO</a></li>
+      			<li class="nav-item"><a class="nav-link" href="puzzle.html">PUZZLE</a></li>
+      			<li class="nav-item active"><a class="nav-link" href="calculadora_jquery.html">CALCULADORA</a></li>
+    		</ul>
+  		</div>
+	</nav>
+	</div>
+	<!--calculadora -->
+  <div class="container st">
+    <h2 class="text-center">Buenos días, bienvenido a la calculadora de Lorena Lugo</h2> 
+    <div class="container text-center st">
+      <div class="btn-group-vertical">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Número:</span>
+            </div>
+
+            <div contenteditable="true">
+            	<input type="text" id="n1" class="droppable">
+            	
+            </div>
+
+          </div>
+          <div class="btn-group st" role="group">
+
+          	<div class="btn btn-secondary btn-sm" role="button" id="toM">ToM</div>
+          	<div class="btn btn-secondary btn-sm draggable" role="button" id="fromM">FromM</div>
+
+          </div>
+          <div class="btn-group st" role="group">
+            <button id="mas" class="btn btn-secondary btn-sm">+</button>
+            <button id="menos" class="btn btn-secondary btn-sm">-</button>
+            <button id="por" class="btn btn-secondary btn-sm">*</button>
+            <button id="entre" class="btn btn-secondary btn-sm">/</button>
+            <button id="calcular" class="btn btn-secondary btn-sm">=</button>
+          </div>
+          <div class="btn-group" role="group"> 
+            <button id="b1" class="btn btn-secondary btn-sm"> x<sup>2</sup> </button>
+            <button id="elevado" class="btn btn-secondary btn-sm">x<sup>y</sup></button>
+            <button id="inverso" class="btn btn-secondary btn-sm">1/x</button>
+            <button id="sqrt" class="btn btn-secondary btn-sm">√x</button>
+            <button id="parte_entera" class="btn btn-secondary btn-sm">[x]</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button id="potencia_BaseDos" class="btn btn-secondary btn-sm">2<sup>n</sup></button>
+            <button id="factorial" class="btn btn-secondary btn-sm">n!</button>
+            <button id="sumatorio" class="btn btn-secondary btn-sm">Σ(n)</button>
+            <button id="productoria" class="btn btn-secondary btn-sm">Π</button>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+ </div>
+</body>
+
+</html>
+
