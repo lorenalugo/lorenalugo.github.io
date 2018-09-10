@@ -1,41 +1,93 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-	<title>lorenalugo</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet'>
-	<script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title></title>
 </head>
 <body>
-		<div class="text-center">
-				<img src="lorena.jpg" class="rounded-circle img-fluid pict">
-		</div>
-		
-		<div class="text-center name">	  		
-    		<h1 class="display-4">Lorena Lugo</h1>
-    		<p class="lead">Chemical Engineer/Web Developer</p>
-    		<div class="hello text-center">
-    			<p>Hi, I'm a web development enthusiastic, I'm a freeCodeCamp camper, where I've learned a lot of javaScript. I'm about to get my Front End Development Certificate, so close. You can see a few things that I've built on freeCodeCamp and codepen.io</p>	
-    		</div>
-    		
-  		</div>
+    <header>
+      <nav id="nav-bar" class="flex">
+        <div>
+          <a class="nav-link" href="#welcome-section">About</a>
+        </div>
+        <div>
+          <a class="nav-link" href="#projects">Projects</a>
+        </div>
+        <div>
+          <a class="nav-link" href="#links">Links</a>
+        </div>
+<!--For the button
+        <div>
+          <ul>
+            <li><a class="nav-link" href="#welcome-section">About</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#links">Links</a></li>
+          </ul>        
+        </div>
+-->
+      </nav>  
+    
+    </header>
+    <main class="container">
+      
+      <section id="welcome-section">
+        <div>
+          <img class="pict" src="lorena.jpg">
+          <h1>Lorena Lugo</h1>
+          <p>Chemical Engineer/Web Developer</p>
+        </div>
+      </section>
+      
+      <hr>
 
-		<footer class="text-center">
-			<div>
-			<a href="https://www.freecodecamp.org/lorenalugo"><img src="freeCodeCamp.jpg" class="pos"></a>
-			<a href="https://codepen.io/lorenalugo/#"><img src="codepen.png" class="pos"></a>
-			</div>
-			<div class="btn-group" role="group">
-				<a href="../proyectos/Carrusel/carrusel_bootstrap.html" class="btn btn-secondary btn-sm">1</a>
-				<a href="../proyectos/carrusel_citas/carrusel_citas_jQuery.html" class="btn btn-secondary btn-sm">2</a>
-				<a href="../proyectos/carrusel_citasModulo8/carrusel_citas_localStorage.html" class="btn btn-secondary btn-sm">3</a>
-				<a href="../proyectos/gmaps/map_mod9Oblig.html" class="btn btn-secondary btn-sm">4</a>
-			</div>
-		</footer>
+      <section id="projects">
+        <h2>Some of my Projects...</h2>
+        <div class="grid">
+          <div class="project-tile">
+            <a href="https://codepen.io/lorenalugo/full/pyBJqb" target="blank"><img src="tribute-page.png">
+            <p>Tribute Page</p></a>
+          </div>
+          <div class="project-tile">
+            <a href="https://codepen.io/lorenalugo/full/QBNgXR" target="blank"><img src="landing-page.png">
+            <p>Product Landing Page</p></a>
+          </div>
+          <div class="project-tile">
+            <a href="https://codepen.io/lorenalugo/full/PBoREq/" target="blank"><img src="survey-form.png">
+            <p>Survey Form</p></a>
+          </div>
+          <div class="project-tile">
+            <a href="https://codepen.io/lorenalugo/full/LBjVWY/" target="blank"><img src="tecnical-doc.png">
+            <p>Technical Documentation Page</p></a>
+          </div>
+          <div class="project-tile">
+            <a href="https://codepen.io/lorenalugo/full/vKkdNj" target="blank"><img src="random-quotes.png">
+            <p>Random Quote App</p></a>
+          </div>
+          <div class="project-tile">
+            <a href="https://codepen.io/lorenalugo/full/VbrqBO" target="blank"><img src="twitchtv.png">
+            <p>Twitch TV App</p></a>
+          </div>
+          
+        </div>
+      </section>
+      
+      <hr>
+      <section id="links">
+        <h2>Profile Links</h2>
+        <div id="profile-link" class="flex">
+          <a href="https://www.freecodecamp.org/lorenalugo"><img src="https://pbs.twimg.com/profile_images/782132102368223232/yJxwuI1g_400x400.jpg"></a>
+          <a href="https://github.com/lorenalugo"><img src="https://image.flaticon.com/icons/svg/25/25231.svg"></a>
+          <a href="https://www.linkedin.com/in/lorena-lugo-b7b991116/"><img src="https://image.flaticon.com/icons/png/512/8/8707.png"></a>
+        </div>  
+      </section>
+
+    </main>
+    <footer class="container">
+      <p>Created by Lorena Lugo</p>
+    </footer>
 </body>
 </html>
