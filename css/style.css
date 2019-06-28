@@ -552,6 +552,7 @@ ul.portfolio li.active {
 
 .portfolio .item img {
     width: 100%;
+    border: 1px solid #24b662;
 }
 
 .item {
@@ -672,52 +673,27 @@ ul.portfolio li.active {
 /* Statistics */
 
 .statistics-section {
-	position: relative;
-    background: url(../images/bg/statistics.jpg);
-    background-size: cover;
-    z-index: 1;
+    background-color: #ccc;
+    width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.skills-img {
+  display: block;
+  width: 100px;
+  height: auto;
 }
 
 .statistics {
-  margin: 25px 0;
+  margin: 25px 0 0 0;
   overflow: hidden;
   color: #ffffff;
 }
-
-.statistics.block .statistics-icon,
-.statistics.block .statistics-content {
-  width: auto;
-  float: none;
-  text-align: center;
-}
-
-.statistics-icon {
-  width: 30%;
-  text-align: center;
-  margin-right: 5%;
-  float: left;
-  font-size: 50px;
-}
-
-.statistics-content {
-  float: left;
-  width: 65%;
-  text-align: left;
-}
-
-.statistics-content > h5 {
-  font-size: 34px;
-  margin-top: 0;
-}
-
-.statistics-content > span {
-  display: block;
-  font-weight: 500;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-
 
 /* Services */
 
@@ -1067,6 +1043,17 @@ ul.portfolio li.active {
     .contact-us-detail {
         margin-bottom: 30px;
     }
+
+    .skills-img {
+      height: 100px;
+      width: auto;
+      margin: auto;
+     }
+
+     .flex-container {
+      flex-direction: column;
+      align-items: center;
+     }
 }
 
 
@@ -1099,6 +1086,17 @@ ul.portfolio li.active {
      .home-section-background p {
          font-size: 12px;
       }
+
+      .skills-img {
+      height: 100px;
+      width: auto;
+      margin: auto;
+     }
+
+     .flex-container {
+      flex-direction: column;
+      align-items: center;
+     }
 }
 
 
@@ -1112,7 +1110,17 @@ ul.portfolio li.active {
      .button-style:before {
           display: none;
 	   }
-	
+	   
+     .skills-img {
+      height: 100px;
+      width: auto;
+      margin: auto;
+     }
+
+     .flex-container {
+      flex-direction: column;
+      align-items: center;
+     }
 }
 
 
